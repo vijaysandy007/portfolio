@@ -1,0 +1,38 @@
+
+.skill-section-container h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.skill-section-container .text {
+    margin-bottom: 50px;
+    line-height: 2rem;
+    text-align: justify;
+    font-size: 17px;
+}
+
+.skill-section-container .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-section-container .cells .cell {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+.skill-section-container .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}

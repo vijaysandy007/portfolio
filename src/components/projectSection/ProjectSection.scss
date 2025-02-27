@@ -1,0 +1,103 @@
+
+@use "../../assets/scss/variables.scss" as v;
+.projects-section-container .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.projects-section-container .text {
+    text-align: center;
+
+}
+.projects-section-container .text p{
+    margin-bottom: 50px;
+    line-height: 2rem;
+    text-align: justify;
+    font-size: 17px;
+
+}
+
+.projects-section-container .text h2 {
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+
+.projects-section-container .cards .card {
+    --font-color: #323232;
+    --bg-color: #e0e0e0;
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+    background:v.$bg-color;
+    box-shadow: -9px 9px 18px #5a5a5a,
+        9px -9px 18px #ffffff;
+    display: flex;
+    flex-direction: column;
+    transition: .4s;
+    position: relative;
+}
+
+.projects-section-container .cards .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px 2px #5a5a5a;
+}
+
+.projects-section-container .cards .card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    background-color: blueviolet;
+}
+
+.projects-section-container .cards .card__descr-wrapper {
+    padding: 15px;
+    display: grid;
+}
+
+.projects-section-container .cards .card__title {
+    color:v.$font-color;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.projects-section-container .cards .card__descr {
+    color:v.$font-color;
+}
+
+.projects-section-container .cards .svg {
+    width: 25px;
+    height: 25px;
+    transform: translateY(25%);
+    fill:v.$font-color;
+}
+
+.projects-section-container .cards .card__links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+.projects-section-container .cards .card__links .link {
+    color:v.$font-color;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.projects-section-container .cards .card__links .link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+    .projects-section-container .cards {
+        justify-content: center;
+
+    }
+}

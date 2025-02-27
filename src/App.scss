@@ -1,0 +1,22 @@
+@use "./assets/scss/variables.scss" as v;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: v.$text-color;
+  background-color: v.$background-color;
+  max-width: 1400px;
+  margin: 0 auto;
+}

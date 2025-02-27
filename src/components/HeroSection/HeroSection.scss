@@ -1,0 +1,83 @@
+@use "../../assets/scss/variables.scss" as v;
+
+.hero-section-conatiner .headshot img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.hero-section-conatiner {
+    // height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+    //  border: 2px solid red;
+}
+
+.hero-section-conatiner .text {
+    flex: 5;
+}
+.hero-section-conatiner .text p {
+    text-align: justify;
+    line-height: 2rem;
+    font-size: 17px;
+    
+}
+
+.hero-section-conatiner .text h2 {
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+
+.hero-section-conatiner .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section-conatiner .links {
+    display: flex;
+    margin-top: 25px;
+    flex-wrap: wrap;
+
+}
+
+.hero-section-conatiner .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid v.$link-color;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+    color: v.$link-color;
+}
+
+.hero-section-conatiner .text .links a:hover {
+    color: v.$text-color;
+    border: 2px solid v.$text-color;
+}
+
+
+
+@media (max-width: 850px) {
+    /* SECTION 1: Hero */
+    .hero-section-conatiner .text h2 {
+      font-size: 35px;
+    }
+  }
+  
+
+@media (max-width:740px) {
+
+    /* HERO SECTION STARTS HERE */
+    .hero-section-conatiner {
+        flex-direction: column-reverse;
+        margin-bottom: 100px;
+    }
+
+    .hero-section-conatiner .headshot img {
+        width: 300px;
+    }
+}
