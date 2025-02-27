@@ -1,4 +1,9 @@
 @use "../../assets/scss/variables.scss" as v;
+
+.contact-section-container{
+    margin: 50px 0 ;
+}
+
 .contact-section-container h2 {
     font-size: 35px;
 }
@@ -23,6 +28,9 @@
     flex-direction: column;
 }
 
+.contact-section-container .group form input[type="email"] {
+   text-transform: uppercase;
+}
 .contact-section-container .group form input,
 .contact-section-container .group form textarea {
     font-family: 'Poppins', sans-serif;
@@ -30,9 +38,11 @@
     background-color: transparent;
     padding: 10px;
     margin-bottom: 15px;
+    font-size: 18px;
     outline: none;
     resize: none;
 }
+
 
 .contact-section-container .group form button {
     font-size: 16px;
@@ -40,6 +50,7 @@
     color: #fff;
     background-color: v.$link-color;
     border: none;
+    padding: 10px 20px;
     height: 50px;
     cursor: pointer;
     transition: .1s;
@@ -47,6 +58,18 @@
 
 .contact-section-container .group form button:hover {
     filter: brightness(.9);
+}
+.contact-section-container .group form .button-group{
+    display: flex;
+    gap: 5px;
+    
+}
+.contact-section-container .group form .button-group button:nth-of-type(1){
+    flex: 5;
+}
+.contact-section-container .group form .button-group button:nth-of-type(2){
+    flex: 5;
+    background-color: orangered;
 }
 
 @media (max-width:740px) {
