@@ -1,5 +1,5 @@
-
 @use "../../assets/scss/variables.scss" as v;
+
 .projects-section-container .cards {
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +11,8 @@
     text-align: center;
 
 }
-.projects-section-container .text p{
+
+.projects-section-container .text p {
     margin-bottom: 50px;
     line-height: 2rem;
     text-align: justify;
@@ -31,7 +32,7 @@
     width: 250px;
     height: 350px;
     border-radius: 20px;
-    background:v.$bg-color;
+    background: v.$bg-color;
     box-shadow: -9px 9px 18px #5a5a5a,
         9px -9px 18px #ffffff;
     display: flex;
@@ -59,7 +60,7 @@
 }
 
 .projects-section-container .cards .card__title {
-    color:v.$font-color;
+    color: v.$font-color;
     text-align: center;
     margin-bottom: 15px;
     font-weight: 900;
@@ -67,14 +68,14 @@
 }
 
 .projects-section-container .cards .card__descr {
-    color:v.$font-color;
+    color: v.$font-color;
 }
 
 .projects-section-container .cards .svg {
     width: 25px;
     height: 25px;
     transform: translateY(25%);
-    fill:v.$font-color;
+    fill: v.$font-color;
 }
 
 .projects-section-container .cards .card__links {
@@ -85,7 +86,7 @@
 }
 
 .projects-section-container .cards .card__links .link {
-    color:v.$font-color;
+    color: v.$font-color;
     font-weight: 600;
     font-size: 15px;
     text-decoration: none;
@@ -94,6 +95,52 @@
 .projects-section-container .cards .card__links .link:hover {
     text-decoration: underline;
 }
+
+.projects-section-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    user-select: none;
+    // background: rgba(255, 255, 255, 0.2);
+        /* Transparent White */
+        backdrop-filter: blur(2px);
+
+  
+}
+
+
+
+.overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.2);
+        /* Transparent White */
+        backdrop-filter: blur(2px);
+        /* Glass Effect */
+        border-radius: 10px;
+        /* Smooth Corners */
+        width: 100%;
+        height: 100%;
+        
+        // transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1;
+        display: flex; /* Enables flexbox */
+        align-items: center; /* Centers vertically */
+        justify-content: center; 
+}
+
+.overlay span{
+    // text-align: center;
+    background-color: #323232;
+    padding: 10px;
+    color: #ffffff;
+    // line-height: 2.5;
+}
+
+
 
 @media (max-width: 650px) {
     .projects-section-container .cards {

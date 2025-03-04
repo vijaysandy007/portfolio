@@ -30,6 +30,12 @@ const Contact = () => {
     };
   }, []);
 
+  const submitForm = () =>{
+    toast.success("Thank you for contact, I will reach you soon",{
+      theme: "dark",
+      closeButton:false
+    });
+  }
 
   return (
     <>
@@ -58,13 +64,14 @@ const Contact = () => {
             <textarea id="message" cols={30} rows={10}></textarea>
 
             <div className="button-group">
-              <button type="submit">Send Message</button>
-              <button ref={downloadRef} type="button">Download CV</button>
-              <ToastContainer />
+              <button type="button" onClick={submitForm}><i className="fa-solid fa-envelope-circle-check"></i>Send Message</button>
+              <button ref={downloadRef} type="button"><i className="fa-solid fa-download"></i>Download CV</button>
 
             </div>
           </form>
         </div>
+              <ToastContainer />
+
       </div>
     </>
   )

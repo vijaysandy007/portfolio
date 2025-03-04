@@ -3,6 +3,8 @@ nav {
     padding: 0 50px;
     height: 80px;
     margin-bottom: 100px;
+    padding-inline: 10px;
+
 }
 
 .hero-section {
@@ -25,54 +27,55 @@ main {
 
 main section {
     // position: absolute;
+    padding: 0 50px;
+    
     overflow: auto;
     // height: 100%;
     // scroll-snap-align: start;
 }
 
 .projects-section {
-    padding: 0 50px;
     // height: auto;
     margin-top: 100px;
     // border: 1px solid red;
 }
 
 .contact-section {
-    padding: 0 50px;
     // height: 100%;
     margin: 100px 0;
 
 }
 
 .skills-section {
-    padding: 0 50px;
     margin-bottom: 100px;
+}
+
+.layout-container{
+    height: 100vh;
+    overflow: scroll;
+    // padding-inline: 25px;
+    
 }
 
 @media (max-width:600px) {
 
     /* NAVBAR STARTS HERE */
-    nav {
-        padding: 0 20px;
-    }
+ 
 
     /* NAVBAR END HERE */
 
     .skills-section {
-        padding: 0 20px;
         height: auto;
         margin-bottom: 100px;
     }
 
     .projects-section {
-        padding: 0 20px;
         margin-bottom: 100px;
         height: auto;
     }
 
     .contact-section {
         height: auto;
-        padding: 0 20px;
         margin-bottom: 100px;
     }
 

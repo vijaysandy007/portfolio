@@ -5,10 +5,40 @@ import ProjectSection from "../projectSection/ProjectSection";
 import Contact from "../contactSection/Contact";
 import { motion } from "framer-motion";
 import "./Layout.scss";
+import { useState, useEffect,useRef } from "react";
 const Layout = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const layoutRef = useRef<HTMLDivElement |null>(null); // Reference to layout-container
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (layoutRef.current && layoutRef.current.scrollTop > 0) {
+              setIsScrolled(true);
+            } else {
+              setIsScrolled(false);
+            }
+          };
+      
+          const layoutElement = layoutRef.current;
+          if (layoutElement) {
+            layoutElement.addEventListener("scroll", handleScroll);
+          }
+      
+          return () => {
+            if (layoutElement) {
+              layoutElement.removeEventListener("scroll", handleScroll);
+            }
+          };
+    },[])
+
     return (
         <>
-            <nav>
+           <div className="layout-container" ref={layoutRef}>
+           <nav
+                className={`position-sticky top-0 transition-all ${isScrolled ? "bg-white text-white shadow" : "bg-transparent"
+                    }`}
+                style={{ zIndex: 1000 }}
+            >
                 <Header />
             </nav>
             <main>
@@ -38,14 +68,14 @@ const Layout = () => {
                 {/* SKILL SECTION END*/}
 
 
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: false, amount: 0.5 }}
                 >
                     <section id="projects" className="projects-section">
-                        <ProjectSection  />
+                        <ProjectSection />
                     </section>
                 </motion.div>
 
@@ -61,6 +91,8 @@ const Layout = () => {
                     </section>
                 </motion.div>
             </main>
+           </div>
+          
         </>
 
     )
