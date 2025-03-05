@@ -8,11 +8,11 @@ import "./Layout.scss";
 import { useState, useEffect, useRef } from "react";
 const Layout = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const layoutRef = useRef<HTMLDivElement | null>(null); // Reference to layout-container
+    const layoutRef = useRef<HTMLDivElement | null>(null); 
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768); // Adjust based on your mobile breakpoint
+            setIsMobile(window.innerWidth <= 768); 
         };
 
         handleResize(); // Check on initial render
