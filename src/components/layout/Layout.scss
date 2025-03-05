@@ -28,6 +28,7 @@ main {
 main section {
     // position: absolute;
     padding: 0 50px;
+    // border: 1px solid red;
     
     overflow: auto;
     // height: 100%;
@@ -57,14 +58,19 @@ main section {
     
 }
 
-@media (max-width:600px) {
+@media (max-width:810px) {
 
     /* NAVBAR STARTS HERE */
  
 
     /* NAVBAR END HERE */
+    main section {
+        padding:0 20px;
+        // border: 1px solid red;
+    }
 
     .skills-section {
+        
         height: auto;
         margin-bottom: 100px;
     }
@@ -90,3 +96,4 @@ main section {
         height: auto;
     }
 }
+

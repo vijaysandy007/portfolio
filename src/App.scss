@@ -1,5 +1,6 @@
 @use "./assets/scss/variables.scss" as v;
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,4 +20,11 @@ body {
   background-color: v.$background-color;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+@media (max-width:810px) {
+  body {
+    margin: unset;
+
+  }
 }
