@@ -22,7 +22,7 @@
 .hero-section-conatiner .text p {
     text-align: justify;
     line-height: 2rem;
-    font-size: 17px;
+    font-size: 18px;
 
 }
 
@@ -52,7 +52,7 @@
     }
     45%,
     55% {
-      width: 7.2em;
+      width: 6em;
     } /* adjust width based on content */
     90%,
     100% {
@@ -113,6 +113,7 @@
     /* SECTION 1: Hero */
     .hero-section-conatiner .text h2 {
         font-size: 35px;
+    line-height: 2rem;
     }
 }
 
