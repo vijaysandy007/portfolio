@@ -1,11 +1,16 @@
 @use "../../assets/scss/variables.scss" as v;
 
-.skill-section-container{
+.skill-section-container {
     margin-block: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // border: 1px solid white;
+    // justify-items: center;
+    border: 1px solid rgb(43, 43, 43);
+    padding: 25px;
+    margin: 50px 0;
+    height: 100%;
+    overflow: scroll;
 
 }
 
@@ -48,7 +53,8 @@
     // border: 1.5px solid v.$text-light;
     border-radius: 5px;
 }
-.skill-section-container .cells .cell:nth-child(even){
+
+.skill-section-container .cells .cell:nth-child(even) {
     background-color: v.$secondary-color;
 }
 
@@ -174,43 +180,48 @@
         width: 100%;
     }
 }
-.modal-title{
+
+.modal-title {
     color: v.$primary-color;
 }
+
 @media (max-width:924px) {
     .skill-certification_container {
         justify-content: center;
-        margin-inline:unset ;
+        margin-inline: unset;
 
     }
 
 }
+
 @media (max-width:471px) {
     .nav {
         // border: 1px solid v.$text-light !important;
-        width:unset;
-    
+        width: unset;
+
     }
 
 }
 
 @media (max-width:720px) {
-    .skill-certification_container{
+    .skill-certification_container {
         padding-inline: unset;
     }
+
     .skill-section-container {
         margin-top: 10px;
-        
+
     }
 
     .skill-section-container h2 {
         font-size: 25px;
     }
+
     .nav {
         // border: 1px solid v.$text-light !important;
-    
-        width:unset;
-    
+
+        width: unset;
+
     }
 
     .skill-section-container .text {

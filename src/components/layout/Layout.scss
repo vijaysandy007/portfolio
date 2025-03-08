@@ -6,20 +6,20 @@ nav {
 
 .hero-section {
     margin: 50px 50px 100px 0;
-    display: flex;
-    place-items: center;
+    // display: flex;
+    // place-items: center;
     height: 100%;
     // justify-content: space-around;
     // margin-inline: 50px;
-    // border: 2px solid blue;
 
 }
 
 main {
-    height: 100vh;
-    height: 100dvh;
+    // height: 100vh;
+    // height: 100dvh;
     overflow: auto;
-    scroll-snap-type:y mandatory;
+    height: 100%;
+    // scroll-snap-type:y mandatory;
     scroll-behavior: smooth;
     // scrollbar-width: none;
 
@@ -27,13 +27,11 @@ main {
 
 main section {
     // position: absolute;
-    padding: 0 50px;
+    padding: 50px 50px;
     // margin-inline: 50px;
-    // border: 1px solid red;
-    
     overflow: auto;
-    height: 100%;
-    scroll-snap-align: start;
+    // height: 100%;
+    // scroll-snap-align: start;
 }
 
 .projects-section {
@@ -57,19 +55,16 @@ main section {
 
 .skills-section {
     background-color: v.$text-dark;
-    margin-bottom: 100px;
+    margin: 100px 0;
     margin-inline: 50px;
     // border: 1px solid red;
-    display: flex;
-    place-items: center;
-
-
 }
 
 .layout-container{
     height: 100vh;
     overflow: hidden;
   scroll-behavior: smooth;
+  
   background: linear-gradient(
     135deg,
     #121212 25%,
