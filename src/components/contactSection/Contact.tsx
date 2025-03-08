@@ -39,11 +39,12 @@ const Contact = () => {
 
   return (
     <>
-      <div className="contact-section-container block">
-        <h2>Contact</h2>
+      <div className="contact-section-container">
 
         <div className="group">
           <div className="text">
+        <h2>Contact</h2>
+
             Looking for a skilled Full Stack Developer to join your team? Or want to discuss an exciting
             project? I’m open to job opportunities, freelance work, and collaborations!
 

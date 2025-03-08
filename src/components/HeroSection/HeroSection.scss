@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    justify-content: space-around;
+    margin-bottom: 50px;
     //  border: 2px solid red;
 }
 
@@ -35,7 +35,7 @@
     // display: inline-block;
     margin-bottom: 40px;
     white-space: nowrap;
-    border-right: 0.2em solid v.$secondary-color; 
+    border-right: 6px solid v.$secondary-color; 
     overflow: hidden;
     animation:typeAndDelete 4s steps(11) infinite, blinkCursor 0.5s step-end infinite alternate;
 }
@@ -52,7 +52,7 @@
     }
     45%,
     55% {
-      width: 6em;
+      width: 7.5em;
     } /* adjust width based on content */
     90%,
     100% {

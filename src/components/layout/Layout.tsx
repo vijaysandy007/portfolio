@@ -4,44 +4,42 @@ import SkillSection from "../SkillSection/SkillSection";
 import ProjectSection from "../projectSection/ProjectSection";
 import Contact from "../contactSection/Contact";
 import "./Layout.scss";
-import { useState, useEffect, useRef } from "react";
+// import { useState, useEffect, useRef } from "react";
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Layout = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const layoutRef = useRef<HTMLDivElement | null>(null);
+    // const [isScrolled, setIsScrolled] = useState(false);
+    // const layoutRef = useRef<HTMLDivElement | null>(null);
 
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (layoutRef.current && layoutRef.current.scrollTop > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         if (layoutRef.current && layoutRef.current.scrollTop > 0) {
+    //             setIsScrolled(true);
+    //         } else {
+    //             setIsScrolled(false);
+    //         }
+    //     };
 
-        const layoutElement = layoutRef.current;
-        if (layoutElement) {
-            layoutElement.addEventListener("scroll", handleScroll);
-        }
+    //     const layoutElement = layoutRef.current;
+    //     if (layoutElement) {
+    //         layoutElement.addEventListener("scroll", handleScroll);
+    //     }
 
-        return () => {
-            if (layoutElement) {
-                layoutElement.removeEventListener("scroll", handleScroll);
-            }
-        };
-    }, [])
+    //     return () => {
+    //         if (layoutElement) {
+    //             layoutElement.removeEventListener("scroll", handleScroll);
+    //         }
+    //     };
+    // }, [])
 
 
 
     return (
         <>
-            <div className="layout-container" ref={layoutRef}>
+            <div className="layout-container" >
                 <nav
-                    className={`position-sticky top-0 transition-all ${isScrolled ? "bg-dark" : "bg-transparent"
-                        }`}
-                    style={{ zIndex: 1000 }}
+                    className="bg-dark position-sticky top-0 w-100"
                 >
                     <Header />
                 </nav>
