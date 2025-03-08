@@ -185,14 +185,32 @@
     }
 
 }
+@media (max-width:471px) {
+    .nav {
+        // border: 1px solid v.$text-light !important;
+        width:unset;
+    
+    }
+
+}
 
 @media (max-width:720px) {
+    .skill-certification_container{
+        padding-inline: unset;
+    }
     .skill-section-container {
         margin-top: 10px;
+        
     }
 
     .skill-section-container h2 {
         font-size: 25px;
+    }
+    .nav {
+        // border: 1px solid v.$text-light !important;
+    
+        width:unset;
+    
     }
 
     .skill-section-container .text {
