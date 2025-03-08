@@ -32,7 +32,7 @@
     width: 250px;
     height: 350px;
     border-radius: 20px;
-    background: v.$bg-color;
+    background: v.$text-light;
     box-shadow: -9px 9px 18px #5a5a5a,
         9px -9px 18px #ffffff;
     display: flex;
@@ -60,7 +60,7 @@
 }
 
 .projects-section-container .cards .card__title {
-    color: v.$font-color;
+    color: v.$white;
     text-align: center;
     margin-bottom: 15px;
     font-weight: 900;
@@ -68,14 +68,14 @@
 }
 
 .projects-section-container .cards .card__descr {
-    color: v.$font-color;
+    color: v.$white;
 }
 
 .projects-section-container .cards .svg {
     width: 25px;
     height: 25px;
     transform: translateY(25%);
-    fill: v.$font-color;
+    fill: v.$white;
 }
 
 .projects-section-container .cards .card__links {
@@ -86,7 +86,7 @@
 }
 
 .projects-section-container .cards .card__links .link {
-    color: v.$font-color;
+    color: v.$white;
     font-weight: 600;
     font-size: 15px;
     text-decoration: none;
@@ -144,5 +144,17 @@
 @media (max-width:810px){
     .projects-section-container .cards {
         justify-content: center;
+    }
+}
+
+@media (max-width:700px){
+    .projects-section-container .text h2{
+        font-size: 25px;
+    }
+    .projects-section-container .text p{
+        font-size: 14px;
+    }
+    .card p{
+        font-size: 14px;
     }
 }

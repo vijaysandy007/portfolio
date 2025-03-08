@@ -1,17 +1,20 @@
+@use "../../assets/scss/variables.scss" as v;
 nav {
     // position: absolute;
-    padding: 0 50px;
+    // padding: 0 50px;
     height: 80px;
     margin-bottom: 100px;
-    padding-inline: 10px;
+    // padding-inline: 10px;
+    // margin-inline: 50px;
 
 }
 
 .hero-section {
-    padding: 0 50px;
+    // padding: 0 50px;
     height: 50%;
-    margin: 50px 0;
+    margin: 50px;
     margin-bottom: 100px;
+    // margin-inline: 50px;
     // border: 2px solid red;
 
 }
@@ -28,6 +31,7 @@ main {
 main section {
     // position: absolute;
     padding: 0 50px;
+    // margin-inline: 50px;
     // border: 1px solid red;
     
     overflow: auto;
@@ -37,23 +41,43 @@ main section {
 
 .projects-section {
     // height: auto;
-    margin-top: 100px;
+    margin: 100px 0;
+    margin-inline: 50px;
+
     // border: 1px solid red;
 }
 
 .contact-section {
     // height: 100%;
     margin: 100px 0;
+    background-color: v.$text-dark;
+    margin-inline: 50px;
 
 }
 
 .skills-section {
+    background-color: v.$text-dark;
     margin-bottom: 100px;
+    margin-inline: 50px;
+
 }
 
 .layout-container{
     height: 100vh;
     overflow: scroll;
+  scroll-behavior: smooth;
+  background: linear-gradient(
+    135deg,
+    #121212 25%,
+    #1a1a1a 25%,
+    #1a1a1a 50%,
+    #121212 50%,
+    #121212 75%,
+    #1a1a1a 75%,
+    #1a1a1a
+  );
+
+  /* Animation */
     // padding-inline: 25px;
     
 }
@@ -61,7 +85,10 @@ main section {
 @media (max-width:810px) {
 
     /* NAVBAR STARTS HERE */
- 
+    nav{
+    margin-inline:unset;
+
+    }
 
     /* NAVBAR END HERE */
     main section {
@@ -92,7 +119,29 @@ main section {
 }
 
 @media (max-width:740px) {
+    nav{
+     margin-bottom: 20px;
+    margin-inline:unset;
+
+    }
     .hero-section {
         height: auto;
+        margin: 10px 0;
     }
+
+    main section {
+        padding:0 10px;
+        margin: 10px 0;
+        // border: 1px solid red;
+    }
+    .projects-section {
+        margin: 10px 0;
+    }
+    .skills-section{
+        margin: 10px 0;
+    }
+    .contact-section{
+        margin: 10px 0 50px 0;
+    }
+
 }

@@ -1,4 +1,6 @@
 @use "./assets/scss/variables.scss" as v;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 
 * {
   margin: 0;
@@ -15,11 +17,20 @@ a {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  color: v.$text-color;
-  background-color: v.$background-color;
-  max-width: 1400px;
-  margin: 0 auto;
+  font-family: 'Poppins", sans-serif';
+  color: v.$text-light;
+  background-color: v.$primary-color;
+  // max-width: 1400px;
+  width: 100vw;
+  user-select: none;
+  
+  // margin: 0 auto;
+}
+.layout-sec{
+width: 100%;
+scroll-behavior: smooth;
+
+// border: 1px solid red;
 }
 
 @media (max-width:810px) {

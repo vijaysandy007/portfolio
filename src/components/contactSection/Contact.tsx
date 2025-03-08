@@ -55,13 +55,13 @@ const Contact = () => {
 
           <form>
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" />
+            <input type="text" id="name" placeholder="Enter name" />
 
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" />
+            <input type="email" id="email" placeholder="Enter email" />
 
             <label htmlFor="message">Message</label>
-            <textarea id="message" cols={30} rows={10}></textarea>
+            <textarea id="message" cols={30} rows={10} placeholder="Enter message"></textarea>
 
             <div className="button-group">
               <button type="button" onClick={submitForm}><i className="fa-solid fa-envelope-circle-check"></i>Send Message</button>

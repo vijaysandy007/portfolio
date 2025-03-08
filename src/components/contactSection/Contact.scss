@@ -1,7 +1,7 @@
 @use "../../assets/scss/variables.scss" as v;
 
-.contact-section-container{
-    margin: 0 0 50px 0;
+.contact-section-container {
+    margin: 10px 0 50px 0;
 }
 
 .contact-section-container h2 {
@@ -11,6 +11,21 @@
 .contact-section-container .group {
     display: flex;
     gap: 50px;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .contact-section-container .group .text {
@@ -26,29 +41,39 @@
     flex: 3;
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
-.contact-section-container .group form input[type="email"] {
-   text-transform: uppercase;
+.contact-section-container .group form label {
+    margin-block: 10px;
+    color: v.$white;
 }
+
+
 .contact-section-container .group form input,
 .contact-section-container .group form textarea {
     font-family: 'Poppins', sans-serif;
-    border: 2px solid v.$link-color;
+    border: 2px solid v.$secondary-color;
     background-color: transparent;
     padding: 10px;
+    color: v.$white;
+    border-radius: 10px;
     margin-bottom: 15px;
     font-size: 18px;
     outline: none;
     resize: none;
 }
 
+.contact-section-container .group form input::placeholder,
+.contact-section-container .group form textarea::placeholder {
+    color: v.$text-light;
+}
 
 .contact-section-container .group form button {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    background-color: v.$link-color;
+    background-color: v.$secondary-color;
     border: none;
     padding: 10px 20px;
     height: 50px;
@@ -57,30 +82,39 @@
 }
 
 .contact-section-container .group form button:hover {
-    filter: brightness(.9);
+    // filter: brightness(.9);
+    background-color: v.$secondary-color-dark;
+
 }
-.contact-section-container .group form .button-group{
+
+.contact-section-container .group form .button-group {
     display: flex;
     width: 100%;
     gap: 5px;
-    
+
 }
-.contact-section-container .group form .button-group button:nth-of-type(1){
+
+.contact-section-container .group form .button-group button:nth-of-type(1) {
     display: flex;
     justify-content: center;
     gap: 15px;
     align-items: center;
     flex: 5;
 }
-.contact-section-container .group form .button-group button:nth-of-type(2){
+
+.contact-section-container .group form .button-group button:nth-of-type(2) {
     display: flex;
     justify-content: center;
     gap: 15px;
     align-items: center;
     flex: 5;
-    background-color: black;
+    background-color: v.$text-light;
+    ;
+    color: v.$primary-color;
+    font-weight: bold;
 }
-.contact-section-container .group form .button-group button:nth-of-type(2):hover{
+
+.contact-section-container .group form .button-group button:nth-of-type(2):hover {
     background-color: #bdbdbd;
     color: black;
     font-weight: bold;
@@ -91,11 +125,36 @@
     .contact-section-container .group {
         flex-direction: column;
     }
+    .contact-section-container .group form{
+        padding: 5px;
+    }
 
 }
 
-@media (max-width:810px){
-    .contact-section-container .group{
+@media (max-width:810px) {
+    .contact-section-container .group {
         flex-direction: column;
+    }
+}
+
+@media (max-width:700px) {
+    .contact-section-container {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .contact-section-container h2 {
+        font-size: 25px;
+    }
+
+    .contact-section-container .group .text {
+        font-size: 14px;
+    }
+
+    .contact-section-container .group form input,
+    .contact-section-container .group form textarea {
+        border: 1px solid v.$secondary-color;
+        padding: 5px;
+        font-size: 14px;
     }
 }

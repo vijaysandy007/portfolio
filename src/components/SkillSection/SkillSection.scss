@@ -1,7 +1,15 @@
+@use "../../assets/scss/variables.scss" as v;
+
 .skill-section-container h2 {
     text-align: center;
     font-size: 35px;
     margin-bottom: 40px;
+    color: v.$white;
+    font-weight: bold;
+}
+
+.skill-section-container h2 span {
+    color: v.$secondary-color;
 }
 
 .skill-section-container .text {
@@ -14,6 +22,7 @@
 .skill-section-container .cells {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -23,10 +32,15 @@
     align-items: center;
     gap: 10px;
     width: 200px;
+    background-color: v.$secondary-color-dark;
+    color: v.$white;
     padding: 10px 20px;
     margin: 10px;
-    border: 1.5px solid #d3d3d3;
+    // border: 1.5px solid v.$text-light;
     border-radius: 5px;
+}
+.skill-section-container .cells .cell:nth-child(even){
+    background-color: v.$secondary-color;
 }
 
 .skill-section-container .cells .cell img {
@@ -43,32 +57,47 @@
 }
 
 .nav {
-    border: 1px solid #c6c6c6 !important;
-    padding: 10px !important;
+    // border: 1px solid v.$text-light !important;
+    border-radius: 15px;
+    padding: 20px !important;
+    background-color: v.$text-light;
+
 }
 
 .nav-tabs .nav-link {
     padding: 10px;
     font-weight: bold;
-    color: black;
+    color: v.$white;
+    border: none;
+
 }
 
 .nav-tabs .nav-link.active {
     padding: 10px;
     color: white;
     font-weight: bold;
-    background-color: black;
+    background-color: v.$primary-color;
     border-radius: 30px;
+    border: none;
     outline: none;
 }
 
+.nav-tabs .nav-link:hover {
+    border: none;
+}
+.skill-section-container{
+    margin-block: 50px;
+}
 
 .skill-certification_container {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     gap: 25px;
-    //   justify-content: center;
+    // justify-content: center;
+    // margin-inline:188px ;
+    padding-inline: 50px;
+    margin-top: 50px;
     flex: 1;
 
 
@@ -96,12 +125,14 @@
             transition: transform 0.3s ease-in-out;
             z-index: 1;
         }
-        &:hover::after{
+
+        &:hover::after {
             // height: 100%;
             transform: translateY(0);
         }
 
     }
+
     .link-icon {
         position: absolute;
         top: 50%;
@@ -117,28 +148,56 @@
         background: rgba(255, 255, 255, 0.2);
         padding: 10px;
         border-radius: 50%;
-      }
+    }
 
-      &:hover .link-icon {
+    &:hover .link-icon {
         opacity: 1;
         transform: translate(-50%, -50%);
         display: block;
-      }
+    }
 }
 
-.container_view{
+.container_view {
     height: 100%;
     width: 100%;
 
-    img{
+    img {
         height: 100%;
         width: 100%;
     }
 }
-
+.modal-title{
+    color: v.$primary-color;
+}
 @media (max-width:924px) {
     .skill-certification_container {
         justify-content: center;
+        margin-inline:unset ;
 
+    }
+
+}
+
+@media (max-width:720px) {
+    .skill-section-container {
+        margin-top: 10px;
+    }
+
+    .skill-section-container h2 {
+        font-size: 25px;
+    }
+
+    .skill-section-container .text {
+        font-size: 14px;
+    }
+
+    .skill-section-container .cells .cell img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .skill-section-container .cells .cell span {
+
+        font-size: 14px;
     }
 }

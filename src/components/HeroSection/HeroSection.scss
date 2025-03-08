@@ -11,25 +11,70 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    justify-content: space-between;
+    justify-content: space-around;
     //  border: 2px solid red;
 }
 
 .hero-section-conatiner .text {
     flex: 5;
 }
+
 .hero-section-conatiner .text p {
     text-align: justify;
     line-height: 2rem;
     font-size: 17px;
-    
+
 }
 
 .hero-section-conatiner .text h2 {
-    font-size: 45px;
+    // font-size: 45px;
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 6rem;
+    color: v.$white;
+    // display: inline-block;
     margin-bottom: 40px;
+    white-space: nowrap;
+    border-right: 0.2em solid v.$secondary-color; 
+    overflow: hidden;
+    animation:typeAndDelete 4s steps(11) infinite, blinkCursor 0.5s step-end infinite alternate;
 }
+@keyframes blinkCursor {
+    50% {
+      border-right-color: transparent;
+    }
+  }
+  
+  @keyframes typeAndDelete {
+    0%,
+    10% {
+      width: 0;
+    }
+    45%,
+    55% {
+      width: 7.2em;
+    } /* adjust width based on content */
+    90%,
+    100% {
+      width: 0;
+    }
+  }
+  
 
+.hero-section-conatiner .text h2 span:first-child{
+    color: v.$secondary-color;
+    font-weight:0;
+  
+}
+.hero-section-conatiner .text h2 span:nth-child(2){
+    color: v.$text-light;
+    font-weight:0;
+  
+}
+.hero-section-conatiner .text p b {
+   color: v.$white;
+
+}
 .hero-section-conatiner .headshot {
     flex: 2;
     display: flex;
@@ -46,32 +91,36 @@
 .hero-section-conatiner .text .links a {
     display: inline-block;
     padding: 5px 10px;
-    border: 2px solid v.$link-color;
+    font-weight: bold;
+    background-color: v.$secondary-color;
+    // border: 2px solid v.$secondary-color;
     border-radius: 5px;
     margin-right: 10px;
     margin-bottom: 10px;
-    transition: .1s;
-    color: v.$link-color;
+    transition: .3s;
+    color: v.$white;
 }
 
 .hero-section-conatiner .text .links a:hover {
-    color: v.$text-color;
-    border: 2px solid v.$text-color;
+    background-color: v.$secondary-color-dark;
+    // border: 2px solid v.$text-light;
 }
 
 
 
 @media (max-width: 850px) {
+
     /* SECTION 1: Hero */
     .hero-section-conatiner .text h2 {
-      font-size: 35px;
+        font-size: 35px;
     }
-  }
-  
+}
 
 
 
-@media (max-width:810px){
+
+@media (max-width:810px) {
+
     /* HERO SECTION STARTS HERE */
     .hero-section-conatiner {
         flex-direction: column-reverse;
@@ -80,5 +129,35 @@
 
     .hero-section-conatiner .headshot img {
         width: 300px;
+    }
+}
+
+@media (max-width:720px) {
+    .hero-section-conatiner .text h2 {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    .hero-section-conatiner .text p {
+        font-size: 14px;
+    }
+
+    .hero-section-conatiner .headshot img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-section-conatiner {
+        margin-top: 10px;
+
+        //  border: 2px solid red;
+    }
+    .hero-section-conatiner .text .links a {
+        padding: 3px 5px;
+        border: 1px solid v.$secondary-color;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        transition: .1s;
+        font-size: 14px;
     }
 }

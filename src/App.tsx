@@ -5,7 +5,9 @@ function App() {
 
   return (
     <>
-      <Layout />
+    <div className="layout-sec">
+    <Layout />
+    </div>
     </>
   )
 }

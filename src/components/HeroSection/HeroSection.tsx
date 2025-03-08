@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <div className="hero-section-conatiner">
       <div className="text">
-                <h2>Hi, I'm Vijay 👋</h2>
+                <h2><span>Hi,</span> <span>I'm</span> Vijay</h2>
                 <p>
                     I'm a <b> Full Stack Web Developer </b>with <b>3.5 years </b> of experience in building scalable and
                     efficient web
@@ -16,11 +16,11 @@ const HeroSection = () => {
                     performance, and
                     ensuring user-friendly interfaces.
 
-                    Whether it's developing RESTful APIs, integrating third-party services, or enhancing UI/UX, I strive
+                    Whether it's developing <b>RESTful APIs</b>, integrating third-party services, or enhancing <b>UI/UX</b>, I strive
                     to deliver high-quality solutions that meet business needs. Always eager to learn and adapt to new
                     challenges, I thrive in dynamic environments that push my technical skills to the next level.
 
-                    Let’s build something amazing together! 🚀
+                    Let’s build something amazing together!
                 </p>
                 <div className="links">
                     <div>

@@ -5,17 +5,18 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    padding-inline: 50px;
 }
 
 .header .left a {
     font-size: 22px;
     font-weight: 600;
-    color: v.$text-color;
+    color: v.$white;
     /* text-transform: uppercase; */
 }
 
 .header .right a {
-    color: v.$text-color;
+    color: v.$white;
     margin: 0 10px;
 }
 
@@ -28,15 +29,22 @@
 }
 
 .header .right a:last-child {
-    background-color: v.$text-color;
-    color: v.$background-color;
+    background-color: v.$secondary-color;
+    color: v.$white;
     padding: 5px 15px;
     border-radius: 5px;
+    transition: .3s;
 }
-
+.header .right a:last-child:hover {
+    background-color: v.$secondary-color-dark;
+    
+}
 @media (max-width:600px){
-    .header .right a {
-        font-size: 22px;
+    .header{
+        padding: 10px;
+    }
+    .header .left a {
+        font-size: 17px;
     }
 
     .header .right a span {
@@ -45,7 +53,7 @@
 
     .header .right a:last-child {
         background-color: transparent;
-        color: v.$text-color;
+        color: v.$text-light;
     }
 
 }

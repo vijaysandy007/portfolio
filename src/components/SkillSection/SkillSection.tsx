@@ -28,7 +28,7 @@ const SkillSection = () => {
     const [isVisible, setVisible] = useState(false)
     return (
         <div className="skill-section-container">
-            <h2>Portfolio ShowCase</h2>
+            <h2>Portfolio <span>ShowCase</span></h2>
 
             <Tabs
                 defaultActiveKey="Skills"
@@ -142,7 +142,7 @@ const SkillSection = () => {
 
                         <div className="skill-certification_container__certifcate">
                             <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-164ed8ef-d274-4734-88c2-0424b8a07103.jpg?v=1698336431000" alt="" />
-                            <a href="https://www.hackerrank.com/certificates/40328c5b9292?trk=public_profile_see-credential" className="link-icon" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.udemy.com/certificate/UC-1e990657-0c38-414b-b744-d2a188975fa7/?trk=public_profile_see-credential" className="link-icon" target="_blank" rel="noopener noreferrer">
                                 <OverlayTrigger overlay={<Tooltip >View</Tooltip>}>
                                     <i className="fa-solid fa-link"></i>
                                 </OverlayTrigger>
@@ -156,10 +156,11 @@ const SkillSection = () => {
                                 </OverlayTrigger>
                             </a>
                         </div>
+                        
                         <div className="skill-certification_container__certifcate">
                             {/* <iframe src="https://www.hackerrank.com/certificates/iframe/40328c5b9292"></iframe> */}
                             <img src={hackerRankCertificate} alt="hackerRankCertificate" />
-                            <a href="https://www.udemy.com/certificate/UC-1e990657-0c38-414b-b744-d2a188975fa7/?trk=public_profile_see-credential" className="link-icon" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.hackerrank.com/certificates/40328c5b9292?trk=public_profile_see-credential" className="link-icon" target="_blank" rel="noopener noreferrer">
                                 <OverlayTrigger overlay={<Tooltip >View</Tooltip>}>
                                     <i className="fa-solid fa-link"></i>
                                 </OverlayTrigger>
