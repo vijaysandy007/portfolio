@@ -5,12 +5,13 @@ import ProjectSection from "../projectSection/ProjectSection";
 import Contact from "../contactSection/Contact";
 import "./Layout.scss";
 // import { useState, useEffect, useRef } from "react";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import LayoutAnimation from "../../assets/files/LayoutAnimation";  
+const {headerAnimation,hearoAnimation,skillSectionAnimation,skillProjectAnimation,contactAnimation} =new LayoutAnimation()
 const Layout = () => {
     // const [isScrolled, setIsScrolled] = useState(false);
-    // const layoutRef = useRef<HTMLDivElement | null>(null);
-
+    const layoutRef = useRef<HTMLDivElement>(null);
 
     // useEffect(() => {
     //     const handleScroll = () => {
@@ -33,11 +34,26 @@ const Layout = () => {
     //     };
     // }, [])
 
+    useEffect(() => {
+
+        const mm = gsap.matchMedia();
+        mm.add("(min-width: 769px)", () => {
+        hearoAnimation();
+        headerAnimation();
+        skillSectionAnimation();
+        skillProjectAnimation();
+        contactAnimation();
+
+        });
+        return () => mm.revert();
+
+    }, [])
+
 
 
     return (
         <>
-            <div className="layout-container" >
+            <div className="layout-container" ref={layoutRef}>
                 <nav
                     className="bg-dark position-sticky top-0 w-100"
                 >
@@ -50,7 +66,7 @@ const Layout = () => {
                     </section>
 
 
-                    <section id="skills" className="skills-section block">
+                    <section id="skills" className="skills-section" >
                         <SkillSection />
                     </section>
 

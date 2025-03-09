@@ -17,7 +17,7 @@ nav {
 main {
     // height: 100vh;
     // height: 100dvh;
-    overflow: auto;
+    overflow: scroll;
     height: 100%;
     // scroll-snap-type:y mandatory;
     scroll-behavior: smooth;
@@ -29,7 +29,7 @@ main section {
     // position: absolute;
     padding: 50px 50px;
     // margin-inline: 50px;
-    overflow: auto;
+    overflow: scroll;
     // height: 100%;
     // scroll-snap-align: start;
 }
@@ -62,7 +62,7 @@ main section {
 
 .layout-container{
     height: 100vh;
-    overflow: hidden;
+    overflow: visible;
   scroll-behavior: smooth;
   
   background: linear-gradient(
